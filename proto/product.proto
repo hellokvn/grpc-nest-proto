@@ -4,7 +4,7 @@ package product;
 
 service ProductService {
   rpc FindOne (FindOneRequest) returns (FindOneResponse) {}
-  rpc Create (CreateRequest) returns (CreateResponse) {}
+  rpc CreateProduct (CreateProductRequest) returns (CreateProductResponse) {}
 }
 
 // FindOne
@@ -27,16 +27,16 @@ message FindOneResponse {
   FindOneData data = 3;
 }
 
-// Create
+// CreateProduct
 
-message CreateRequest {
+message CreateProductRequest {
   string name = 2;
   string sku = 3;
   int32 stock = 4;
   double price = 5;
 }
 
-message CreateResponse {
+message CreateProductResponse {
   int32 status = 1;
   repeated string error = 2;
   int32 id = 3;
