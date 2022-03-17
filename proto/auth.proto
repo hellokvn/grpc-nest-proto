@@ -5,7 +5,7 @@ package auth;
 service AuthService {
   rpc Register (RegisterRequest) returns (RegisterResponse) {}
   rpc Login (LoginRequest) returns (LoginResponse) {}
-  rpc ValidateToken (ValidateRequest) returns (ValidateResponse) {}
+  rpc Validate (ValidateRequest) returns (ValidateResponse) {}
 }
 
 // Register
